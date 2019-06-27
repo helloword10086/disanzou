@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="#/">首页</a>
+  <a href="#/min">中</a>
+  <a href="#/last">尾页</a>
+  <div id="content"></div>
+  <script>
+    var route = {
+      '/': '首页',
+      '/min': '中',
+      '/last': '尾页'
+    }
+    // const content = document.getElementById('content');
+    class Router{
+      constructor(option){
+         this.r = option
+        this.init()
+      }
+      init(){
+        window.addEventListener('load', this.hashchangge.bind(this))
+       window.addEventListener('hashchange', this.hashchangge.bind(this))
+       console.log('------------')
+      }
+      hashchangge(){
+        let hash = window.location.hash.slice(1) || '/'
+        document.getElementById('content').innerHTML = this.r[hash]
+        console.log('------------')
+      }
+    }
+     new Router(route)
+    
+     
+  // window.addEventListener('hashchange',() =>{
+  //   let hash = window.location.hash.slice(1) || '/'
+  //   console.log(hash)
+  //   console.log(route[hash])
+  //       document.getElementById('content').innerHTML = route[hash]
+  //       // console.log('------------')
+  // })
+  </script>
+</body>
+</html>

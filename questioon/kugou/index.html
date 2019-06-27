@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/slick-carousel/1.9.0/slick-theme.min.css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainPage">
+        <div class="header">
+            <div class="logo">
+                <a href="">
+                    <img src="https://staticssl.kugou.com/public/root/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="search_wrapper top_search">
+                <div class="search_input">
+                    <input type="text" placeholder="云菲菲 心空">
+                </div>
+            </div>
+            <div class="topNav fr">
+                <ul>
+                    <li>客服中心</li>
+                    <li>招贤纳士</li>
+                    <li>会员中心</li>
+                </ul>
+                <div class="login_area">
+                    <div id="login_in" class="clearfix"><a class="login_btn" id="login_btn">登录</a><a target="_blank"
+                            href="http://www.kugou.com/reg/web/" class="regin_btn" id="regin_btn">注册</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="navWrap">
+            <div class="nav">
+                <ul class="homeNav">
+                    <li class="normal active">首页</li>
+                    <li class="normal">榜单</li>
+                    <li class="normal">下载客户端</li>
+                    <li class="normal tux">更多</li>
+                </ul>
+                <ul class="secondMenu" id="secondMenu">
+                    <li>電台</li>
+                    <li>MV</li>
+                    <li>歌單</li>
+                    <li>歌手</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sliderWrap">
+            <div class="banner">
+                   <div><img src="https://imgessl.kugou.com/commendpic/20190109/20190109104215314555.jpg" alt=""></div>
+                
+                   <div> <img src="https://imgessl.kugou.com/commendpic/20190109/20190109104155147376.jpg" alt=""></div> 
+                    <div><img src="https://imgessl.kugou.com/commendpic/20190108/20190108190956902072.jpg" alt=""></div>
+                   <div> <img src="https://imgessl.kugou.com/commendpic/20190410/20190410181756371144.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="download">
+            <div class="overlayer"></div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.banner').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay:true,
+    
+    });
+  });
+  (function(){
+    $('.tux').mouseover(function(){
+      $('.secondMenu').css("display","block")
+  })
+  $('.tux').mouseout(function(){
+      $('.secondMenu').css("display","none")
+  })
+  })()
+//   $('.tux').mouseover(function(){
+//       $('.secondMenu').css("display","block")
+//   })
+//   $('.tux').mouseout(function(){
+//       $('.secondMenu').css("display","none")
+//   })
+//   ()
+  </script>
+</body>
+
+</html>

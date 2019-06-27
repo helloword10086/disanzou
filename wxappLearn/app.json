@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/lesson/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#48a6fd",
+    "navigationBarTitleText": "电影",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "list": [
+      {
+        "pagePath": "pages/main/index",
+        "text": "首页",
+        "iconPath": "images/hover-shouye.png",
+        "selectedIconPath": "images/hover-shouye.png"
+      },
+      {
+        "pagePath": "pages/lesson/index",
+        "text": "中间",
+        "iconPath": "images/class.png",
+        "selectedIconPath": "images/class.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

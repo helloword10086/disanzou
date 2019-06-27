@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var Type ={};
+    for(var i=0,type;type=['String','Array','Number'][i++];){
+        //  console.log(type,'-------');
+        (function(type){
+    Type["is" +type] = function(obj){
+        console.log(obj,'?????');
+     return 
+    })(type)
+    }
+//   type 会找到上下文那个type
+    // Type.isArray = function(){
+    //     return true;
+    // }
+    // Type.isNum = function(){
+    //     return true;
+    // }
+    // Type.isString = function(){
+    //     return true;
+    // }
+
+   </script>
+</body>
+</html>

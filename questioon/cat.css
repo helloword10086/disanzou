@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html body{
+   width: 375px;
+   height: 667px;
+}
+.contain{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    line-height: 1;
+}
+.shenti{
+    transform: translate(50%, 50%);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    margin: 0 auto;
+    background: url(cat/maoshenti.png) no-repeat;
+   
+}
+.wei{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    margin: 0 auto;
+    background: url(cat/maowei.png) no-repeat;
+    left: 25%;
+   
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+    实现reserve的原理
+  let arr = [1,2,3,4,5];  
+  function res(num){
+    let s = num.toString();
+    // console.log(s[0]);
+    let a = []
+    for(let i = 0 ; i < s.length; i++){
+      a.unshift (s[i]);
+      // return a;
+    }
+    return a.join('')
+
+  }
+  console.log(res('abcNAN'));
+  </script> -->
+  <!-- <script>
+    function res(num){
+      let s = num.toString();
+      let a = [];
+      for (let i = s.length ; i >= 0; i--){
+        a.push(s[i]);
+      }
+      return a.join('');
+    }
+    console.log(res('1234'));
+  </script> -->
+  <script>
+  function minNumber(num){
+   num.sort(compare);
+   let res = '';
+   for(let i = 0; i < num.length; i++){
+    res += num[i];
+   }
+   return res;
+  }
+  function compare(a,b){
+    // 拼接成一个字符串的形式
+    let str1 = a + "" +b; //23
+    let str2 = b + ""+a; //32
+    // 数据类型获取下表
+    // console.log(str1.charAt(2))
+    // console.log(str1)
+    
+    //这个for循环到底是干啥的  现在脑子好困啊
+    for(let i = 0; i < str1.length; i++){
+      if(str1.charAt(i) > str2.charAt(i)){
+        return 1
+      }
+      if(str1.charAt(i) < str2.charAt(i))
+      return -1  //返回的是一个false
+    }
+    return 1
+  }
+ 
+  console.log( minNumber([32,4,61,9,14]))
+  </script>
+</body>
+</html>

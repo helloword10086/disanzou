@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+        Number.prototype.add = function(num){
+            // console.log('add 来啦');
+            return this + num;
+        }
+        Number.prototype.M = function(num){
+            // console.log('add 来啦');
+            return this * num;
+        }
+     var numberObj = new Number(10);
+     console.log(numberObj._proto_);  
+     console.log(numberObj.add(3).M(3))  ;
+     </script>
+</body>
+</html>

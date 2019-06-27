@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>運動首飾</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="example">
+        <div class="title">tap</div>
+        <div class="imgBox topBox">
+        <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555310504&di=9195dbeecc30b520d3e612dde0b470f3&src=http://img.mp.itc.cn/upload/20161102/93a9cfc021ed44b28af7a143be6ba017_th.jpeg" alt="">
+        </div>
+        <div class="title">pinch</div>
+        <div class="imgBox ">
+        <img id="pinchImg" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555310504&di=9195dbeecc30b520d3e612dde0b470f3&src=http://img.mp.itc.cn/upload/20161102/93a9cfc021ed44b28af7a143be6ba017_th.jpeg" alt="">
+        </div>
+    </div>
+    <script src="./alloy_finger.js"></script>
+     <script>
+         const pinchImg =document.getElementById('pinchImg')
+           new AlloyFinger(pinchImg,
+           {
+               pinch:function(evt){
+                   console.log(evt.zoom);
+               }
+           })
+     new AlloyFinger(document.querySelector('.topBox'),{
+         top: function(){
+             console.log('top');
+         },
+         doubleTap: function(){
+             console.log('doubleTap')
+         }
+     })
+     </script>
+</body>
+</html>

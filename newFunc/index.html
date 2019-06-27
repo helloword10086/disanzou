@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //constructer
+    function Otaku(name,age){
+        this.name = name;
+        this.age=age;
+        this.habit ='Game';
+    }
+    //构造函数有一个prototype函数 原型是
+    //基于原型对象  原型对象
+    Otaku.prototype.strength =60;
+    Otaku.prototype.sayYourName=function (){
+        console.log('I am' +this.name);
+        
+    }
+    // var person =new Otaku('李丹',18);
+    function objectFactory(constructorFunc,name,age){
+        //空对象 
+        var obj = new Object();
+        // 怎么拿到构造函数里的属性？
+      constructorFunc.call(obj,name,age);
+        console.log(obj);
+        obj._proto_ =constructorFunc.prototype;
+        return obj;
+    }
+    //构造函数是类的源泉
+     var lidan = objectFactory(Otaku,"李丹",18);
+     console.log(lidan);
+    </script>
+</body>
+</html>

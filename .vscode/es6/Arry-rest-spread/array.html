@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //undefined [] -1
+    const a=[
+        {
+            name:1 ,age:18
+        },
+        {
+            name:2 ,age:19
+        },
+        {
+            name:3 ,age:20
+        },
+        {
+            name:4 ,age:30
+        }
+    ];
+    const this_age =a.find((as)=> as.age>20);
+    const this_age_filter =a.filter((as)=>as.age>20);
+    const this_age_index =a.findIndex((as)=> as.age>20);
+   const ages_arry= a.every((age) =>age.age>18)
+   const this_some=a.some(age=>age.age>18);
+    console.log(this_some);
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        display: block;
+        border: 1px solid black;
+        text-align: center;
+        width: 1000px;
+        margin: 0 auto;
+        height: 30px;
+        line-height: 30px;
+        background-color: #fff;
+    }
+    #recycle {
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      background-color: #ddd;
+    }
+    </style>
+</head>
+<body>
+    <div id="map">
+        <div class="main">
+            <li class="box" draggable="true">这是列表1的标题</li>
+            <li class="box" draggable="true">这是列表2的标题</li>
+            <li class="box" draggable="true">这是列表3的标题</li>
+            <li class="box" draggable="true">这是列表4的标题</li>
+            <li class="box" draggable="true">这是列表5的标题</li>
+            <li class="box" draggable="true">这是列表6的标题</li>
+            <li class="box" draggable="true">这是列表7的标题</li>
+        </div>
+        <div id="recycle">
+            回收站
+          </div>
+    </div>
+    <script>
+      const boxs = document.querySelectorAll('.box')
+      let src = null;
+      for(let box of boxs){
+          box.addEventListener('dragstart',function(){
+              this.style.backgroundColor = 'green';
+                src =this;
+          })
+          box.addEventListener('dragend',function(){
+            this.style.backgroundColor = 'red';
+          })
+          box.addEventListener('dragenter',function(){
+            //   console.log('dragenter')
+            this.parentNode.insertBefore(src,this)
+
+          })
+          document.addEventListener('dragover',
+          function(event) {
+        //  event.preventDefault();
+        console.log('dragover')
+          })
+          const re = document.getElementById('recycle')
+          re.addEventListener('drop', function(){
+              src.parentNode.removeChild(src)
+          })
+      }
+    </script>
+</body>
+</html>

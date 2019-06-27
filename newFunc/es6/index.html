@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var f= function(){
+            console.log('function');
+            return 'value';
+        }
+        f();
+        var arrow_f =(V)=>{
+            console.log('function');
+            return 'value';
+        }
+        arrow_f();
+        var arrow_1= V =>{
+            console.log(V)
+        }
+        arrow_1('arrow_1');
+
+        var arrow_2 = V =>V;
+        var arrow_3 =function(){
+            return{
+                name:'hanmeimei',age:18
+            }
+        }
+        var arrow_4 =() =>({name:'hanmeimei',age:18})
+        </script>
+</body>
+</html>
