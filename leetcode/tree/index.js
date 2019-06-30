@@ -40,9 +40,11 @@ function levelOrderTravesal(root){
          // null 层次分隔符
          items.push(levelNodes);
          levelNodes = [];
-         //null 上一层 在队列里的节点 按曾来遍历
+         console.log(queue)
+        //  null 上一层 在队列里的节点 按曾来遍历
          if (queue.length > 0){
            queue.push(null);
+           console.log(queue)
          }
        }
      }
