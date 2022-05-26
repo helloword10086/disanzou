@@ -83,7 +83,7 @@
     "escape-string-regexp": "^1.0.5",
     "etag": "^1.8.1",
     "eventemitter3": "^3.1.2",
-    "eventsource": "^1.0.7",
+    "eventsource": "^2.0.2",
     "execa": "^1.0.0",
     "expand-brackets": "^2.1.4",
     "expand-tilde": "^2.0.2",
